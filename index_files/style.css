@@ -791,6 +791,14 @@ menu tablet
   .main-navigation ul ul {
     display: none;
   }
+  .main-navigation.toggled ul a[href='#']::after,
+  .main-navigation ul a[href='#']::after {
+    display: none;
+  }
+  .main-navigation.toggled ul li:hover ul,
+  .main-navigation ul li:hover ul {
+    display: block;
+  }
 }
 
 .site-main .comment-navigation, .site-main
