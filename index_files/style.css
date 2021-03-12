@@ -795,14 +795,19 @@ menu tablet
   .main-navigation ul a[href='#']::after {
     display: none;
   }
-  .main-navigation.toggled ul li ul,
-  .main-navigation ul li ul {
-    opacity: 0;
-    transition: 0.3s ease;
-  }
   .main-navigation.toggled ul li:hover ul,
   .main-navigation ul li:hover ul {
     display: block;
+    opacity: 1;
+    animation: anim-ul 0.5s forwards;
+  }
+}
+
+@keyframes anim-ul {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
