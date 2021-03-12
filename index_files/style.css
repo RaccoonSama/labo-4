@@ -795,9 +795,15 @@ menu tablet
   .main-navigation ul a[href='#']::after {
     display: none;
   }
+  .main-navigation.toggled ul li ul,
+  .main-navigation ul li ul {
+    opacity: 0;
+    transition: 0.3s ease;
+  }
   .main-navigation.toggled ul li:hover ul,
   .main-navigation ul li:hover ul {
     display: block;
+    opacity: 1;
   }
 }
 
@@ -1238,6 +1244,7 @@ burger div:nth-child(2) {
 }
 
 .site-title {
+  margin-left: 2rem;
   font-size: clamp(1.2rem, -0.875rem + 8.333vw, 5rem);
   font-family: "Roboto", monospace;
   font-weight: bold;
@@ -1252,6 +1259,7 @@ burger div:nth-child(2) {
 }
 
 .site-description {
+  margin-left: 2rem;
   margin-top: 0;
   font-size: clamp(0.3rem, -0.875rem + 8.333vw, 3rem);
   font-family: "Roboto", monospace;
@@ -1259,6 +1267,10 @@ burger div:nth-child(2) {
   width: 40%;
   border-radius: 0px 50px 15px 50px;
   padding-left: 20px;
+}
+
+#post-5 {
+  margin-left: 2rem;
 }
 
 .acceuil {
@@ -1316,10 +1328,6 @@ burger div:nth-child(2) {
 
 .wp-block-column .wp-image-29 {
   border-radius: 50% !important;
-}
-
-.site {
-  margin: 0 2rem 0 2rem;
 }
 
 .carrousel {
